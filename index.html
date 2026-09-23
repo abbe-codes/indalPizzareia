@@ -1,0 +1,1893 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#78cfcf" />
+    <meta
+      name="description"
+      content="Välkommen till Indal Pizzeria. Utforska vår meny med pizza, kebab, sallader, grill &amp; pasta och drycker."
+    />
+    <title>Indal Pizzeria – Vår meny</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/hero-poster.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <noscript
+      ><style>
+        .site-header {
+          background: #fff;
+          color: #303b3c;
+        }
+        .header-menu-link {
+          border-color: #78cfcf;
+        }
+      </style></noscript
+    >
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#meny">Hoppa till menyn</a>
+    <svg
+      class="icon-definitions"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-down" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="icon-up" viewBox="0 0 24 24">
+        <path d="m6 15 6-6 6 6" />
+      </symbol>
+      <symbol id="icon-pause" viewBox="0 0 24 24">
+        <path d="M9 5v14M15 5v14" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path
+          d="m8 3 3 5-3 3a16 16 0 0 0 5 5l3-3 5 3c0 3-2 5-5 5A17 17 0 0 1 3 8c0-3 2-5 5-5Z"
+        />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path
+          d="M8 4v6m-3-6v6c0 3 6 3 6 0V4M8 13v7m10-16c-3 2-4 6-4 9h4m0-9v16"
+        />
+      </symbol>
+      <symbol id="icon-pizza" viewBox="0 0 48 48">
+        <path
+          d="M8 12a31 31 0 0 1 32 0L24 42Zm0 0-2-5a36 36 0 0 1 36 0l-2 5M8 12a31 31 0 0 1 32 0"
+        />
+        <circle cx="19" cy="19" r="2.4" />
+        <circle cx="30" cy="18" r="2.4" />
+        <circle cx="24" cy="29" r="2.4" />
+      </symbol>
+    </svg>
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="#hem"
+          aria-label="Indal Pizzeria, till startsidan"
+        >
+          <svg class="icon brand-icon" aria-hidden="true">
+            <use href="#icon-pizza"></use>
+          </svg>
+          <span>Indal <strong>Pizzeria</strong></span>
+        </a>
+        <nav class="header-nav" aria-label="Huvudnavigation">
+          <a class="home-link" href="#hem">Hem</a>
+          <a class="header-menu-link" href="#meny"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#icon-menu"></use>
+            </svg>
+            Vår meny</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hem" aria-labelledby="hero-title">
+        <video
+          class="hero-video"
+          id="hero-video"
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="assets/hero-poster.jpg"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source data-src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <span class="eyebrow hero-eyebrow">Välkommen till</span>
+          <h1 id="hero-title">Indal Pizzeria</h1>
+          <p>En god stund börjar med god mat.</p>
+          <a class="button hero-button" href="#meny"
+            >Upptäck vår meny
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-arrow"></use></svg
+          ></a>
+        </div>
+        <div class="hero-bottom">
+          <span class="hero-tagline">Goda smaker. Trevligt sällskap.</span>
+          <a class="scroll-cue" href="#meny" aria-label="Bläddra ner till menyn"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#icon-down"></use></svg
+          ></a>
+          <button
+            class="video-toggle"
+            id="video-toggle"
+            type="button"
+            aria-label="Spela bakgrundsvideo"
+            hidden
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-play"></use>
+            </svg>
+            <span>Spela video</span>
+          </button>
+        </div>
+      </section>
+
+      <nav class="category-nav" aria-label="Menykategorier">
+        <div class="category-nav-inner">
+          <a class="category-nav-title" href="#meny"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#icon-menu"></use>
+            </svg>
+            Vår meny</a
+          >
+          <div class="category-links">
+            <a href="#pizza">Pizza<span>58</span></a>
+            <a href="#kebabmeny">Kebabmeny<span>9</span></a>
+            <a href="#sallader">Sallader<span>11</span></a>
+            <a href="#grill-pasta">Grill &amp; pasta<span>12</span></a>
+            <a href="#drycker">Drycker<span>4</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="menu-section" id="meny" aria-labelledby="menu-title">
+        <div class="section-intro">
+          <span class="eyebrow">Något för alla smaker</span>
+          <h2 id="menu-title">Vår meny</h2>
+          <p>
+            Hitta din favorit bland pizza, kebab, sallader, grill och pasta.
+          </p>
+          <span class="intro-rule"></span>
+        </div>
+
+        <div class="menu-panel">
+          <div class="menu-panel-header">
+            <span
+              ><svg class="icon" aria-hidden="true">
+                <use href="#icon-menu"></use>
+              </svg>
+              Meny</span
+            >
+            <span class="sample-label">Matpriser i kronor</span>
+          </div>
+          <section
+            class="menu-category"
+            id="pizza"
+            aria-labelledby="pizza-title"
+          >
+            <div class="category-heading">
+              <div>
+                <h3 id="pizza-title">Pizza</h3>
+                <p>
+                  Tomatsås och ost ingår i alla pizzor. Glutenfri pizzabotten
+                  finns.
+                </p>
+              </div>
+              <span class="category-count">58 pizzor</span>
+            </div>
+            <h4 class="menu-subheading">Standardpizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Standardpizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">1</span>
+                      <div>
+                        <span class="item-name">Margherita</span>
+                        <span class="item-description">Tomatsås, ost</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>115&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">2</span>
+                      <div>
+                        <span class="item-name">Vesuvio</span>
+                        <span class="item-description">Skinka</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>115&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">3</span>
+                      <div>
+                        <span class="item-name">Maffioso</span>
+                        <span class="item-description">Skinka, paprika</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">4</span>
+                      <div>
+                        <span class="item-name">Hawaii</span>
+                        <span class="item-description">Skinka, ananas</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">5</span>
+                      <div>
+                        <span class="item-name">Cacciatore</span>
+                        <span class="item-description">Salami, lök</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">6</span>
+                      <div>
+                        <span class="item-name">Ingmar</span>
+                        <span class="item-description"
+                          >Bacon, lök, svartpeppar</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">7</span>
+                      <div>
+                        <span class="item-name">Bolognese</span>
+                        <span class="item-description">Köttfärssås</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">8</span>
+                      <div>
+                        <span class="item-name">Al Fungi</span>
+                        <span class="item-description">Champinjoner</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>115&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">9</span>
+                      <div>
+                        <span class="item-name">Al Tono</span>
+                        <span class="item-description">Tonfisk, lök</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>120&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Specialpizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Specialpizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">10</span>
+                      <div>
+                        <span class="item-name">Capricciosa</span>
+                        <span class="item-description"
+                          >Skinka, champinjoner</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">11</span>
+                      <div>
+                        <span class="item-name">Gondola</span>
+                        <span class="item-description">Skinka, räkor</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">12</span>
+                      <div>
+                        <span class="item-name">Opera</span>
+                        <span class="item-description">Skinka, tonfisk</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">13</span>
+                      <div>
+                        <span class="item-name">Pescatore</span>
+                        <span class="item-description"
+                          >Skinka, ananas, räkor</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">14</span>
+                      <div>
+                        <span class="item-name">Caruso</span>
+                        <span class="item-description"
+                          >Skinka, köttfärs, lök</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">15</span>
+                      <div>
+                        <span class="item-name">Pasifico</span>
+                        <span class="item-description"
+                          >Skinka, banan, curry, ananas</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">16</span>
+                      <div>
+                        <span class="item-name">Orientale</span>
+                        <span class="item-description"
+                          >Köttfärs, lök, champinjoner</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">17</span>
+                      <div>
+                        <span class="item-name">Balanzone</span>
+                        <span class="item-description"
+                          >Skinka, salami, lök</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">18</span>
+                      <div>
+                        <span class="item-name">Marinara</span>
+                        <span class="item-description">Räkor, musslor</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">20</span>
+                      <div>
+                        <span class="item-name">Miami</span>
+                        <span class="item-description"
+                          >Champinjoner, ananas</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">21</span>
+                      <div>
+                        <span class="item-name">Carides</span>
+                        <span class="item-description">Svamp, räkor</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Vegetariska pizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Vegetariska pizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">23</span>
+                      <div>
+                        <span class="item-name">Vegetale</span>
+                        <span class="item-description"
+                          >Champinjoner, paprika, lök, oliver</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">24</span>
+                      <div>
+                        <span class="item-name">Vegetale Special</span>
+                        <span class="item-description"
+                          >Champinjoner, paprika, tomat, lök, fefferoni</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">25</span>
+                      <div>
+                        <span class="item-name">Tropicano</span>
+                        <span class="item-description"
+                          >Banan, ananas, curry</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Inbakade pizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Inbakade pizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">26</span>
+                      <div>
+                        <span class="item-name">Calzone</span>
+                        <span class="item-description">Skinka</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">27</span>
+                      <div>
+                        <span class="item-name">Calzone Capri</span>
+                        <span class="item-description"
+                          >Skinka, champinjoner</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>135&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">28</span>
+                      <div>
+                        <span class="item-name">Calzone Special</span>
+                        <span class="item-description">Skinka, räkor</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>135&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Fläskfilépizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Fläskfilépizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">29</span>
+                      <div>
+                        <span class="item-name">Vättaberg</span>
+                        <span class="item-description"
+                          >Fläskfilé, skinka, tomat, färsk vitlök, lök,
+                          bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">30</span>
+                      <div>
+                        <span class="item-name">Älven</span>
+                        <span class="item-description"
+                          >Fläskfilé, skinka, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">31</span>
+                      <div>
+                        <span class="item-name">Kävsta</span>
+                        <span class="item-description"
+                          >Fläskfilé, svamp, färsk vitlök, lök, jalapeno,
+                          tacosås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">32</span>
+                      <div>
+                        <span class="item-name">Jala Jala</span>
+                        <span class="item-description"
+                          >Fläskfilé, tomat, lök, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Favoritpizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Favoritpizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">33</span>
+                      <div>
+                        <span class="item-name">Quattro</span>
+                        <span class="item-description"
+                          >Skinka, champinjoner, räkor, musslor</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">34</span>
+                      <div>
+                        <span class="item-name">Venesia</span>
+                        <span class="item-description"
+                          >Skinka, räkor, tonfisk</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">35</span>
+                      <div>
+                        <span class="item-name">Romana</span>
+                        <span class="item-description"
+                          >Skinka, lök, salami, bacon, fefferoni</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">36</span>
+                      <div>
+                        <span class="item-name">Jamaica</span>
+                        <span class="item-description"
+                          >Kyckling, banan, ananas, curry</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">37</span>
+                      <div>
+                        <span class="item-name">Diamore</span>
+                        <span class="item-description"
+                          >Kyckling, paprika, lök, oliver</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">38</span>
+                      <div>
+                        <span class="item-name">Alwan (halvinbakad)</span>
+                        <span class="item-description"
+                          >Skinka, räkor, champinjoner, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">39</span>
+                      <div>
+                        <span class="item-name">Indiana</span>
+                        <span class="item-description"
+                          >Skinka, räkor, banan, ananas, curry</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">40</span>
+                      <div>
+                        <span class="item-name">Rimini</span>
+                        <span class="item-description"
+                          >Skinka, räkor, crabfish</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">41</span>
+                      <div>
+                        <span class="item-name">Diablo</span>
+                        <span class="item-description"
+                          >Skinka, champinjoner, paprika, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">42</span>
+                      <div>
+                        <span class="item-name">Lucia</span>
+                        <span class="item-description"
+                          >Skinka, salami, bacon, vitlökssås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">43</span>
+                      <div>
+                        <span class="item-name">Mexicana</span>
+                        <span class="item-description"
+                          >Köttfärs, tacosås, lök, vitlök, tacokrydda,
+                          jalapeno</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">44</span>
+                      <div>
+                        <span class="item-name">Azteka</span>
+                        <span class="item-description"
+                          >Skinka, tacosås, jalapeno, tacokrydda,
+                          vitlökssås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">45</span>
+                      <div>
+                        <span class="item-name">Prinsessa Victoria</span>
+                        <span class="item-description"
+                          >Skinka, räkor, champinjoner, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>140&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Oxfilépizzor</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Oxfilépizzor – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">46</span>
+                      <div>
+                        <span class="item-name">Etna</span>
+                        <span class="item-description"
+                          >Oxfilé, sparris, gorgonzolaost</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">47</span>
+                      <div>
+                        <span class="item-name">Pompei</span>
+                        <span class="item-description"
+                          >Oxfilé, skinka, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">48</span>
+                      <div>
+                        <span class="item-name">Primavera</span>
+                        <span class="item-description"
+                          >Oxfilé, ägg, bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">49</span>
+                      <div>
+                        <span class="item-name">Sundsvall Special</span>
+                        <span class="item-description"
+                          >Oxfilé, lök, tomatskivor</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">50</span>
+                      <div>
+                        <span class="item-name">Lady Diana</span>
+                        <span class="item-description"
+                          >Oxfilé, skinka, tomater, vitlök, lök,
+                          bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">51</span>
+                      <div>
+                        <span class="item-name">Maravilla</span>
+                        <span class="item-description"
+                          >Oxfilé, lök, salladsost, färska tomater</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">52</span>
+                      <div>
+                        <span class="item-name">Indal Special</span>
+                        <span class="item-description"
+                          >Oxfilé, paprika, champinjoner, kronärtskocka</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">53</span>
+                      <div>
+                        <span class="item-name">Acapulco</span>
+                        <span class="item-description"
+                          >Oxfilé, champinjoner, vitlök, lök, jalapeno, tacosås,
+                          tacokrydda</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">54</span>
+                      <div>
+                        <span class="item-name">Liden Special</span>
+                        <span class="item-description"
+                          >Oxfilé, paprika, tomat, jalapeno</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="menu-subheading">Bagarens special</h4>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Bagarens special – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pizza</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">55</span>
+                      <div>
+                        <span class="item-name">Viking</span>
+                        <span class="item-description"
+                          >Ölkorv, salami, bacon, tomater</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">56</span>
+                      <div>
+                        <span class="item-name">Quattro Formaggi</span>
+                        <span class="item-description"
+                          >Pizzaost, salladsost, gorgonzolaost,
+                          mozzarellaost</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">57</span>
+                      <div>
+                        <span class="item-name">Godfather</span>
+                        <span class="item-description"
+                          >Kyckling, champinjoner, vitlök, lök, jalapeno,
+                          tacosås, tacokrydda</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">58</span>
+                      <div>
+                        <span class="item-name">Ambulans</span>
+                        <span class="item-description"
+                          >Oxfilé, skinka, vitlök, tomater, lök, kronärtskocka,
+                          bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">59</span>
+                      <div>
+                        <span class="item-name">Häreborg Special</span>
+                        <span class="item-description"
+                          >Skinka, lök, salami, bacon, fefferoni, ägg</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">60</span>
+                      <div>
+                        <span class="item-name">Gudmundstjärn</span>
+                        <span class="item-description"
+                          >Fläskfilé, skinka, tomat, färsk vitlök, lök, ägg,
+                          bearnaisesås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="category-details">
+              Såser: kebabsås, vitlökssås, bearnaisesås och tacosås.
+            </p>
+          </section>
+
+          <section
+            class="menu-category"
+            id="kebabmeny"
+            aria-labelledby="kebabmeny-title"
+          >
+            <div class="category-heading">
+              <div>
+                <h3 id="kebabmeny-title">Kebabmeny</h3>
+                <p>Rullar, tallrikar och kebabpizzor.</p>
+              </div>
+              <span class="category-count">9 rätter</span>
+            </div>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Kebabmeny – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rätt</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">1</span>
+                      <div>
+                        <span class="item-name">Kebabrulle</span>
+                        <span class="item-description"
+                          >Kebabkött, tunnbröd</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">2</span>
+                      <div>
+                        <span class="item-name">Kycklingrulle</span>
+                        <span class="item-description">Kyckling, tunnbröd</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">3</span>
+                      <div>
+                        <span class="item-name">Kebabpizza</span>
+                        <span class="item-description"
+                          >Tomatsås, ost, kebabkött, vitlökssås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">4</span>
+                      <div>
+                        <span class="item-name">Kebabpizza Special</span>
+                        <span class="item-description"
+                          >Tomatsås, ost, pommes, kebabkött, vitlökssås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">5</span>
+                      <div>
+                        <span class="item-name">Kebabpizza Kungen</span>
+                        <span class="item-description"
+                          >Tomatsås, ost, kebabkött, tomater, lök,
+                          vitlökssås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">6</span>
+                      <div>
+                        <span class="item-name">Kebabtallrik</span>
+                        <span class="item-description">Pommes, kebabkött</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">7</span>
+                      <div>
+                        <span class="item-name">Kycklingtallrik</span>
+                        <span class="item-description">Pommes, kyckling</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">8</span>
+                      <div>
+                        <span class="item-name">Falafeltallrik</span>
+                        <span class="item-description">Pommes, falafel</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">9</span>
+                      <div>
+                        <span class="item-name">Falafelrulle</span>
+                        <span class="item-description">Falafel, tunnbröd</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="category-details">
+              I alla kebabrätter ingår isbergssallad, lök, tomater, gurka,
+              peperoni och kebabsås.
+            </p>
+          </section>
+
+          <section
+            class="menu-category"
+            id="sallader"
+            aria-labelledby="sallader-title"
+          >
+            <div class="category-heading">
+              <div>
+                <h3 id="sallader-title">Sallader</h3>
+                <p>Alla sallader kostar 130 kr.</p>
+              </div>
+              <span class="category-count">11 rätter</span>
+            </div>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Sallader – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Sallad</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">1</span>
+                      <div>
+                        <span class="item-name">Ost &amp; skinksallad</span>
+                        <span class="item-description">Ost, skinka</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">2</span>
+                      <div>
+                        <span class="item-name">Västkustsallad</span>
+                        <span class="item-description"
+                          >Musslor, räkor, tonfisk, crabfish</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">3</span>
+                      <div>
+                        <span class="item-name">Kycklingsallad</span>
+                        <span class="item-description"
+                          >Kyckling, ost, ananas</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">4</span>
+                      <div>
+                        <span class="item-name">Grekisk sallad</span>
+                        <span class="item-description"
+                          >Salladsost, oliver, paprika, lök</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">5</span>
+                      <div>
+                        <span class="item-name">Räksallad</span>
+                        <span class="item-description">Räkor, ost, ananas</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">6</span>
+                      <div>
+                        <span class="item-name">Americansallad</span>
+                        <span class="item-description"
+                          >Skinka, ost, ananas, oliver</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">7</span>
+                      <div>
+                        <span class="item-name">Tonfisksallad</span>
+                        <span class="item-description"
+                          >Tonfisk, lök, champinjoner</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">8</span>
+                      <div>
+                        <span class="item-name">Kebabsallad</span>
+                        <span class="item-description"
+                          >Kebabkött, lök, fefferoni</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">9</span>
+                      <div>
+                        <span class="item-name">Svensksallad</span>
+                        <span class="item-description"
+                          >Skinka, räkor, ost, ananas</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">10</span>
+                      <div>
+                        <span class="item-name">Blandsallad</span>
+                        <span class="item-description"
+                          >Ost, skinka, räkor, kyckling</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">11</span>
+                      <div>
+                        <span class="item-name">Avocadosallad</span>
+                        <span class="item-description"
+                          >Avokado, räkor, ägg, rödlök, vitlöksbröd</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="category-details">
+              I alla sallader ingår tomater, gurka, isbergssallad, inbakat bröd
+              och sås.
+            </p>
+          </section>
+
+          <section
+            class="menu-category"
+            id="grill-pasta"
+            aria-labelledby="grill-pasta-title"
+          >
+            <div class="category-heading">
+              <div>
+                <h3 id="grill-pasta-title">Grill &amp; pasta</h3>
+                <p>Hamburgare, grillfavoriter och pasta.</p>
+              </div>
+              <span class="category-count">12 rätter</span>
+            </div>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Grill &amp; pasta – rätter och priser i kronor
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rätt</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">1</span>
+                      <div>
+                        <span class="item-name">Hamburgare 90 g</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>110&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">2</span>
+                      <div>
+                        <span class="item-name">Hamburgare 150 g</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>125&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">3</span>
+                      <div>
+                        <span class="item-name">Grillbiff</span>
+                        <span class="item-description"
+                          >Välj vitlökssås eller bearnaisesås.</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">4</span>
+                      <div>
+                        <span class="item-name">Lövbiff</span>
+                        <span class="item-description"
+                          >Välj vitlökssås eller bearnaisesås.</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">5</span>
+                      <div>
+                        <span class="item-name">Schnitzel</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>130&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">6</span>
+                      <div>
+                        <span class="item-name">Fläskfilé</span>
+                        <span class="item-description"
+                          >Välj vitlökssås eller bearnaisesås.</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">7</span>
+                      <div>
+                        <span class="item-name">Kycklingfilé</span>
+                        <span class="item-description"
+                          >Välj vitlökssås eller bearnaisesås.</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">9</span>
+                      <div>
+                        <span class="item-name">Lasagne</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>135&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">10</span>
+                      <div>
+                        <span class="item-name">Pasta Genovese</span>
+                        <span class="item-description"
+                          >Kyckling, pasto, stekt lök, gräddsås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">11</span>
+                      <div>
+                        <span class="item-name">Husets pasta</span>
+                        <span class="item-description"
+                          >Strimlad fläskfilé, champinjoner, paprika, lök,
+                          gräddsås</span
+                        >
+                      </div>
+                    </div>
+                  </th>
+                  <td>145&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">12</span>
+                      <div>
+                        <span class="item-name">Järde burgare 90 g</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>135&nbsp;kr</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <span class="item-number">13</span>
+                      <div>
+                        <span class="item-name">Järde burgare 150 g</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>155&nbsp;kr</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section
+            class="menu-category"
+            id="drycker"
+            aria-labelledby="drycker-title"
+          >
+            <div class="category-heading">
+              <div>
+                <h3 id="drycker-title">Drycker</h3>
+                <p>Exempeldrycker – sortiment och priser uppdateras.</p>
+              </div>
+              <span class="category-count">4 drycker</span>
+            </div>
+            <table class="menu-table">
+              <caption class="sr-only">
+                Drycker – exempelrätter och priser i euro
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Dricka</th>
+                  <th scope="col">Pris</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <img
+                        src="assets/menu-thumb-21.jpg"
+                        alt=""
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div>
+                        <span class="item-name">Coca-Cola</span
+                        ><span class="item-description">33 cl</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>5,70&nbsp;€</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <img
+                        src="assets/menu-thumb-22.jpg"
+                        alt=""
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div>
+                        <span class="item-name">Coca-Cola Zero</span
+                        ><span class="item-description">33 cl</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>2,70&nbsp;€</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <img
+                        src="assets/menu-thumb-23.jpg"
+                        alt=""
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div>
+                        <span class="item-name">Coca-Cola Light</span
+                        ><span class="item-description">1 liter</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>5,70&nbsp;€</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="menu-item">
+                      <img
+                        src="assets/menu-thumb-24.jpg"
+                        alt=""
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div>
+                        <span class="item-name">Fanta Orange</span
+                        ><span class="item-description">33 cl</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>2,70&nbsp;€</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <p class="menu-note">Din favorit väntar. Kom hungrig, gå hem nöjd.</p>
+        </div>
+        <p class="allergy-note">
+          Har du frågor om innehåll eller allergener? Fråga oss innan du
+          beställer.
+        </p>
+      </section>
+
+      <section
+        class="visit-section"
+        id="hitta-hit"
+        aria-labelledby="visit-title"
+      >
+        <div class="visit-inner">
+          <div class="section-intro">
+            <span class="eyebrow">Vi ses i Indal</span>
+            <h2 id="visit-title">Hitta hit &amp; information</h2>
+            <p>Sväng förbi när hungern slår till.</p>
+            <span class="intro-rule"></span>
+          </div>
+
+          <div class="visit-panel">
+            <div class="visit-details">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-pin"></use>
+                </svg>
+                Här hittar du oss
+              </h3>
+              <address class="visit-address">
+                <strong>Indal Pizzeria</strong>
+                Härevägen 2<br />
+                855 97 Indal
+              </address>
+              <a
+                class="button directions-link"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=H%C3%A4rev%C3%A4gen%202%2C%20855%2097%20Indal%2C%20Sverige"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hitta hit i Google Maps
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-arrow"></use>
+                </svg>
+                <span class="sr-only">(öppnas i en ny flik)</span>
+              </a>
+
+              <div class="visit-phone">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-phone"></use>
+                </svg>
+                <div>
+                  <span>Ring oss</span><a href="tel:+466092257">060-922 57</a>
+                </div>
+              </div>
+              <dl class="visit-facts">
+                <div>
+                  <dt>Hos oss</dt>
+                  <dd>Uteservering</dd>
+                </div>
+                <div>
+                  <dt>Pris per person</dt>
+                  <dd>Cirka 100–200 kr</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="visit-hours">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-clock"></use>
+                </svg>
+                Öppettider
+              </h3>
+              <p class="hours-intro">Välkommen in, alla dagar i veckan.</p>
+              <dl class="hours-list">
+                <div>
+                  <dt>Måndag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Tisdag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Onsdag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Torsdag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Fredag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Lördag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Söndag</dt>
+                  <dd>
+                    <time datetime="11:00">11:00</time>–<time datetime="21:00"
+                      >21:00</time
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="#hem">
+          <svg class="icon brand-icon" aria-hidden="true">
+            <use href="#icon-pizza"></use>
+          </svg>
+          <span>Indal <strong>Pizzeria</strong></span>
+        </a>
+        <p>Välkommen till en god stund.</p>
+        <a class="back-to-top" href="#hem"
+          >Till toppen
+          <svg class="icon" aria-hidden="true"><use href="#icon-up"></use></svg
+        ></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Indal Pizzeria</span
+        ><span>Gjord för goda smaker.</span>
+      </div>
+    </footer>
+  </body>
+</html>
