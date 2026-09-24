@@ -151,6 +151,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid #167b7b; outline-offs
 @media (min-width: 1600px) { .hero { height: 690px; } }
 @media (max-width: 1200px) {
   .category-nav-inner, .menu-section { margin-left: 40px; margin-right: 40px; }
+  .category-nav-title { display: none; }
+  .category-links { width: 100%; min-width: 0; overflow-x: auto; overflow-y: hidden; }
+  .category-links a { flex-shrink: 0; }
+  .category-links a::after { bottom: 0; }
+  .category-links a:focus-visible { outline-offset: -3px; }
 }
 @media (max-width: 760px) {
   :root { --header-height: 68px; --category-height: 59px; }
