@@ -93,5 +93,7 @@ test('menu section headers receive category-appropriate decorative thumbnails', 
   }
   assert.match(script, /heading\.prepend\(image\)/);
   assert.doesNotMatch(script, /item\.prepend\(image\)/);
-  assert.match(styles, /url\("assets\/menu-thumbnails\.jpg"\)/);
+  assert.match(styles, /url\("assets\/menu-thumbnails\.jpg\?v=20261025-thumbnails"\)/);
+  assert.match(html, /href="styles\.css\?v=20261025-thumbnails"/);
+  assert.match(html, /src="script\.js\?v=20261025-thumbnails"/);
 });
