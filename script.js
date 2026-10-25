@@ -10,6 +10,34 @@ const categories = [...document.querySelectorAll(".menu-category")];
 const categoryNav = document.querySelector(".category-nav");
 const menuSection = document.querySelector("#meny");
 
+const thumbnailByCategory = Object.freeze({
+  pizza: "pizza",
+  kycklingmeny: "chicken",
+  kebabmeny: "kebab",
+  sallader: "salad",
+  "grill-pasta": "pasta",
+  hamburgare: "burger",
+  barnmeny: "nuggets",
+  drycker: "drink",
+});
+
+function addCategoryThumbnails() {
+  for (const category of categories) {
+    const thumbnail = thumbnailByCategory[category.id];
+    if (!thumbnail) continue;
+
+    const heading = category.querySelector(".category-heading");
+    if (!heading) continue;
+
+    const image = document.createElement("span");
+    image.className = `category-thumbnail category-thumbnail--${thumbnail}`;
+    image.setAttribute("aria-hidden", "true");
+    heading.prepend(image);
+  }
+}
+
+addCategoryThumbnails();
+
 document.querySelector("#year").textContent = String(new Date().getFullYear());
 
 function updateVideoControl() {
