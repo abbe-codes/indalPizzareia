@@ -28,15 +28,24 @@ test('every category numbers items consecutively from one in display order', () 
   }
 });
 
-test('every category lists items from lowest to highest price', () => {
+test('every pizza subcategory and menu category lists items from lowest to highest price', () => {
   for (const [section, id] of categories) {
-    const rows = [...section.matchAll(/<tr>\s*<th scope="row">[\s\S]*?<\/tr>/g)];
-    const prices = rows.map(([row]) => {
-      const price = row.match(/<td>(\d+)&nbsp;kr<\/td>/);
-      assert.ok(price, `${id}: each item must have a price in kronor`);
-      return Number(price[1]);
-    });
-    assert.deepEqual(prices, [...prices].sort((a, b) => a - b), id);
+    const tables = [...section.matchAll(/<table class="menu-table">[\s\S]*?<\/table>/g)];
+    for (const [table] of tables) {
+      const rows = [...table.matchAll(/<tr>\s*<th scope="row">[\s\S]*?<\/tr>/g)];
+      const prices = rows.map(([row]) => {
+        const price = row.match(/<td>(\d+)&nbsp;kr<\/td>/);
+        assert.ok(price, `${id}: each item must have a price in kronor`);
+        return Number(price[1]);
+      });
+      if (id === 'pizza' && table.includes('Klassiska pizzor')) {
+        const names = rows.map(([row]) => row.match(/class="item-name">([^<]+)/)?.[1]);
+        assert.deepEqual(names.slice(-3), ['Jamaica', 'Diamore', 'Godfather']);
+        assert.deepEqual(prices.slice(0, -3), [...prices.slice(0, -3)].sort((a, b) => a - b), id);
+      } else {
+        assert.deepEqual(prices, [...prices].sort((a, b) => a - b), id);
+      }
+    }
   }
 });
 
@@ -58,15 +67,19 @@ test('drinks contain only the three generic drink options', () => {
   assert.doesNotMatch(drinks[0], /Coca-Cola|Fanta|Festis/);
 });
 
-test('new menu categories and kebab additions use the requested Swedish names and prices', () => {
+test('pizza categories and chicken menu cleanup use the requested names and prices', () => {
   const chicken = categories.find(([, id]) => id === 'kycklingmeny');
   const kebab = categories.find(([, id]) => id === 'kebabmeny');
   assert.ok(chicken, 'The chicken menu category must be present');
-  assert.equal([...chicken[0].matchAll(/<tr>\s*<th scope="row">[\s\S]*?<\/tr>/g)].length, 13);
-  assert.match(chicken[0], /class="item-name">Kycklingnuggets 6 st<\/span>/);
-  assert.ok(kebab[0].includes('Linos Special'));
-  assert.doesNotMatch(kebab[0], /Gyrospizza|Kebabpizza/);
-  assert.match(html, /id="pizza"[\s\S]*?Kebabpizza Special/);
+  assert.equal([...chicken[0].matchAll(/<tr>\s*<th scope="row">[\s\S]*?<\/tr>/g)].length, 4);
+  assert.doesNotMatch(chicken[0], /Pasta Genovese|Kycklingnuggets|Friterad kyckling|Kycklingburgare|Blandsallad|Jamaica|Diamore|Godfather/);
+  assert.doesNotMatch(kebab[0], /Gyrospizza|Kebabpizza|Linos Special/);
+  assert.match(html, /<h4 class="menu-subheading">Klassiska pizzor<\/h4>/);
+  assert.match(html, /class="item-name">Bagabondi<\/span>[\s\S]*?<td>140&nbsp;kr<\/td>/);
+  for (const [name, price] of [['Gyrospizza', 135], ['Kebabpizza', 140], ['Kebabpizza Special', 150], ['Kebabpizza Kungen', 150], ['Linos Special', 145], ['Jamaica', 140], ['Diamore', 140], ['Godfather', 140]]) {
+    const classic = html.match(new RegExp(`<h4 class="menu-subheading">Klassiska pizzor<\\/h4>[\\s\\S]*?class="item-name">${name}<\\/span>[\\s\\S]*?<td>${price}&nbsp;kr<\\/td>`));
+    assert.ok(classic, `${name} must be in Klassiska pizzor at ${price} kr`);
+  }
   assert.ok(html.includes('id="barnmeny"'));
   assert.ok(html.includes('<h3 id="barnmeny-title">Barnmeny</h3>'));
 });
